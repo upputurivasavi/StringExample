@@ -49,7 +49,7 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
-      condition: $TRAVIS_BRANCH =~ develop
+      condition: $TRAVIS_BRANCH == develop
   - provider: script
     script: bash ci/deploy.sh staging ${TRAVIS_BUILD_NUMBER}
     skip_cleanup: true
